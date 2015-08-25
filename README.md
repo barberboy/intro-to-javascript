@@ -55,18 +55,19 @@ JavaScript Programming
   - In the browser with the `script` tag and `src` attribute:
 
     ```html
-       <script src="application.js"></script>
+    <script src="application.js"></script>
     ```
   - On the server with Node.js:
   
     ```sh
     node application.js
     ```
+
 ---
 
 ## JavaScript Programming Language
 
->> _ECMAScript is an object-oriented programming language for performing computations and manipulating computational objects within a host environment._
+> _ECMAScript is an object-oriented programming language for performing computations and manipulating computational objects within a host environment._
 
 [ECMAScript Specification Overview](http://www.ecma-international.org/ecma-262/6.0/#sec-overview)
 
@@ -135,6 +136,7 @@ First-class functions. Functions can be:
 * Properties of objects
 * Passed to other functions
 * Returned by functions
+
 ---
 
 ## JavaScript Programming Language Features
@@ -150,6 +152,7 @@ function Teacher(name) {
 var bebarber = new Teacher("Benjamin Barber");
 console.log(bebarber.name); // -> "Benjamin Barber"
 ```
+
 ---
 
 ## JavaScript Programming Language Features
@@ -163,6 +166,7 @@ var course = {};
 course.name = "Web Technologies";
 course.instructor = bebarber;
 ```
+
 ---
 
 ## Values and Data Types
@@ -195,6 +199,7 @@ Control flow and error handling
 * try/catch/throw
 * Error objects
 * Promises
+
 ---
 
 Loops and iteration
@@ -206,6 +211,7 @@ Loops and iteration
 * break/continue
 * for..in
 * for..of
+
 ---
 
 Functions
@@ -216,6 +222,7 @@ Functions
 * Closures
 * Arguments & parameters
 * Arrow functions
+
 ---
 
 Expressions and operators
@@ -226,6 +233,7 @@ Expressions and operators
 * Conditional (ternary) operator
 
 ---
+
 Numbers and dates
 -----------------
 * Number literals
@@ -234,6 +242,7 @@ Numbers and dates
 * Date object
 
 ---
+
 Text formatting
 ---------------
 * String literals
@@ -243,11 +252,13 @@ Text formatting
 * Regular Expressions
 
 ---
+
 Indexed collections
 -------------------
 * Arrays
 * Array comprehensions
 * Typed arrays
+
 ---
 
 Keyed collections
@@ -256,6 +267,7 @@ Keyed collections
 * WeakMap
 * Set
 * WeakSet
+
 ---
 
 Working with objects
@@ -264,6 +276,7 @@ Working with objects
 * Creating objects
 * Defining methods
 * Getter and setter
+
 ---
 
 Details of the object model
@@ -271,4 +284,5 @@ Details of the object model
 * Prototype-based OOP
 * Creating object hierarchies
 * Inheritance
+
 ---
