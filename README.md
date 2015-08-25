@@ -53,10 +53,12 @@ JavaScript Programming
 - Source code saved in a `.js` file (like "`application.js`")
 - Code is evaluated and executed:
   - In the browser with the `script` tag and `src` attribute:
+
     ```html
        <script src="application.js"></script>
     ```
   - On the server with Node.js:
+  
     ```sh
     node application.js
     ```
