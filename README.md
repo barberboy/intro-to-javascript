@@ -55,12 +55,12 @@ JavaScript Programming
   - In the browser with the `script` tag and `src` attribute:
 
     ```html
-    <script src="application.js"></script>
+<script src="application.js"></script>
     ```
   - On the server with Node.js:
   
     ```sh
-    node application.js
+node application.js
     ```
 
 ---
@@ -77,7 +77,7 @@ communication.
 
 ---
 
-## JavaScript Programming Language Features
+## JavaScript Language Features
 
 Syntax based on C/Java
 
@@ -100,7 +100,7 @@ var index = 0;
 var flag = 's';
 ```
 ---
-## JavaScript Programming Language Features
+## JavaScript Language Features
 
 Dynamically typed
 - Variables do not have a type
@@ -117,7 +117,7 @@ typeof(flag)   // -> "number"
 ```
 ---
 
-## JavaScript Programming Language Features
+## JavaScript Language Features
 
 Object-based
 
@@ -128,7 +128,7 @@ Object-based
 
 ---
 
-## JavaScript Programming Language Features
+## JavaScript Language Features
 
 First-class functions. Functions can be:
 
@@ -139,7 +139,7 @@ First-class functions. Functions can be:
 
 ---
 
-## JavaScript Programming Language Features
+## JavaScript Language Features
 
 Functions as Constructors
 
@@ -155,7 +155,7 @@ console.log(bebarber.name); // -> "Benjamin Barber"
 
 ---
 
-## JavaScript Programming Language Features
+## JavaScript Language Features
 
 Dynamic objects
 
