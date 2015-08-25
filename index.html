@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Presentation</title>
-    <meta charset="utf-8">
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+<head>
+  <title>Introduction to JavaScript</title>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300,300italic,400italic,600italic,700italic' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500,600,300,700' rel='stylesheet'>
+  <style>
+    .remark-slide-content {
+      background: #333;
+      color: white;
+      font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    }
+    .remark-slide-content a {
+      color: #ccc;
+    }
+    .remark-code,
+    .remark-inline-code {
+      font-family: Source Code Pro, monospace
+    }
+  </style>
+</head>
 
-      body { font-family: 'Droid Serif'; }
-      h1, h2, h3 {
-        font-family: 'Yanone Kaffeesatz';
-        font-weight: normal;
-      }
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-    </style>
-  </head>
-  <body>
-    <script src="remark-0.11.0.min.js">
-    </script>
-    <script>
-      var slideshow = remark.create({
-        sourceUrl: 'README.md'
-      });
-    </script>
-  </body>
+<body>
+  <script src="remark-0.11.0.min.js">
+  </script>
+  <script>
+    /* global remark */
+    remark.create({
+      sourceUrl: 'README.md'
+    });
+  </script>
+</body>
+
 </html>
+  
