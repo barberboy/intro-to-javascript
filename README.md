@@ -169,120 +169,93 @@ course.instructor = bebarber;
 
 ---
 
-## Values and Data Types
+## Programming with JavaScript: Syntax
+
+JavaScript syntax is inspired by C/Java
+
+- Statements: group of words, numbers, or operators that perform a certain task
+- Expressions: variable reference, value, or set of values, possibly combined with operations
+- Declarations: expressions that define variables (containers of values) or functions
+- Operators: symbols that perform an operation on one or more operands
+- Whitespace: spaces, tabs, newlines which separate variables, values, operators, and other tokens
+- Comments: source code that is not evaluated, used for documentation and clarification
 
 ---
 
-## Conditionals
+##  Programming with JavaScript: Syntax
+
+- Programs are made up of statements
+- Statements are made up of expressions
+- Expressions come in many flavors 
+- Whitespace separates tokens and provides organization
 
 ---
 
-## Truthiness
+##  Programming with JavaScript: Comments
+
+- C-style line and block comments
+
+```js
+// This entire line is ignored
+
+var foo = "bar"; // Everything after // is ignored
+
+/* This is a multi-line
+   comment.
+*/
+```
+--
+
+Comments are a crucial language feature. Use them.
 
 ---
 
-Grammar and types
------------------
-* Basic syntax & comments
-* Declarations
-* Variable scope
-* Variable hoisting
-* Data structures and types
-* Literals
+##  Programming with JavaScript: Values and Types
+
+JavaScript has 6 primitive data types:
+
+ - boolean -  true and false.
+ - number - any numeric value, 42, or 3.141592
+ - string - a sequence of characters, "Howdy"
+ - null -  a special keyword denoting a null value
+ - undefined - a value automatically assigned to variables don't yet have a value
+ - symbol - new in ECMAScript 6
+
+And one complex data type:
+
+ - object - containers that have properties, and often methods, constructors, and prototypes
 
 ---
 
-Control flow and error handling
--------------------------------
-* if...else
-* switch
-* try/catch/throw
-* Error objects
-* Promises
+##  Programming with JavaScript: Booleans
+
+Booleans represent one of two values: `true` or `false`
+
+```js
+true
+false
+```
+```js
+console.log(typeof true) // -> "boolean"
+console.log(typeof false) // -> "boolean"
+```
+--
+
+(`typeof` operator returns a variable's type)
 
 ---
 
-Loops and iteration
--------------------
+##  Programming with JavaScript: Number
 
-* for
-* while
-* do...while
-* break/continue
-* for..in
-* for..of
+Numbers represent numeric values. Note that there is only *one* number type,
+represented in [64-bit double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 
----
+```js
+42
+3.14159
 
-Functions
----------
-* Defining functions
-* Calling functions
-* Function scope
-* Closures
-* Arguments & parameters
-* Arrow functions
-
----
-
-Expressions and operators
--------------------------
-* Assignment & Comparisons
-* Arithmetic operators
-* Bitwise & logical operators
-* Conditional (ternary) operator
-
----
-
-Numbers and dates
------------------
-* Number literals
-* Number object
-* Math object
-* Date object
-
----
-
-Text formatting
----------------
-* String literals
-* String object
-* Template strings
-* Internationalization
-* Regular Expressions
-
----
-
-Indexed collections
--------------------
-* Arrays
-* Array comprehensions
-* Typed arrays
-
----
-
-Keyed collections
------------------
-* Map
-* WeakMap
-* Set
-* WeakSet
-
----
-
-Working with objects
---------------------
-* Objects and properties
-* Creating objects
-* Defining methods
-* Getter and setter
-
----
-
-Details of the object model
----------------------------
-* Prototype-based OOP
-* Creating object hierarchies
-* Inheritance
+console.log(typeof 42) // -> "number"
+console.log(typeof 3.14159) // -> "number"
+```
 
 ---
