@@ -176,10 +176,20 @@ course.instructor = bebarber;
 JavaScript syntax is inspired by C/Java
 
 - Statements: group of words, numbers, or operators that perform a certain task
+
+--
 - Expressions: variable reference, value, or set of values, possibly combined with operations
+
+--
 - Declarations: expressions that define variables (containers of values) or functions
+
+--
 - Operators: symbols that perform an operation on one or more operands
+
+--
 - Whitespace: spaces, tabs, newlines which separate variables, values, operators, and other tokens
+
+--
 - Comments: source code that is not evaluated, used for documentation and clarification
 
 ---
@@ -187,9 +197,19 @@ JavaScript syntax is inspired by C/Java
 ##  Programming with JavaScript: Syntax
 
 - Programs are made up of statements
+
+--
 - Statements are made up of expressions
-- Expressions come in many flavors 
+
+--
+- Expressions come in many flavors
+
+--
 - Whitespace separates tokens and provides organization
+
+--
+
+[Esprima Parser](http://esprima.org/demo/parse.html)
 
 ---
 
@@ -224,8 +244,35 @@ Variables are containers for values. They store values and object references.
 
 ```js
 var counter = 0;
-console.log(counter);
+var course = {};
+console.log(counter); // 0
+console.log(course);  // {}
 ```
+
+Variables can be optionally initialized with a value.
+
+---
+
+##  Programming with JavaScript: Variables
+
+- Variables exist in one of two scopes: global scope or function scope
+
+--
+  * No "block" scope
+
+--
+* Variables do not have a type
+
+```js
+var a;
+a = "a";
+typeof(a) // string
+a = 0;
+typeof(a) // number
+```
+
+--
+* Variables declarations are "hoisted"
 
 ---
 
@@ -233,9 +280,9 @@ console.log(counter);
 
 JavaScript has 6 primitive data types:
 
- - boolean -  true and false.
- - number - any numeric value, 42, or 3.141592
  - string - a sequence of characters, "Howdy"
+ - number - any numeric value, 42, or 3.141592
+ - boolean -  true and false.
  - null -  a special keyword denoting a null value
  - undefined - a value automatically assigned to variables don't yet have a value
  - symbol - new in ECMAScript 6
@@ -244,6 +291,37 @@ And one complex data type:
 
  - object - containers that have properties, and often methods, constructors, and prototypes
 
+---
+
+##  Programming with JavaScript: Strings
+
+A string literal is zero or more characters enclosed in double (") or single (')
+quotation marks.
+
+```js
+var doubleQuoted = "This is a double-quoted string"
+var singleQuoted = 'This uses single quotes.'
+```
+
+---
+
+##  Programming with JavaScript: Strings
+
+Strings have methods and properties defined on the `String.prototype` object:
+
+- `.length`: Returns the number of characters in the string
+```
+"hello".length === 5
+```
+- `.charAt(index)`: Returns the character at `index`.
+```
+"hello".charAt(1) === 'e'
+```
+- `.replace(old, new)`: Replaces `old` with `new` in the string.
+```
+"Java is the best".replace("Java", "JavaScript");
+// => "JavaScript is the best"
+```
 ---
 
 ##  Programming with JavaScript: Booleans
@@ -276,22 +354,6 @@ represented in [64-bit double-precision floating-point format](https://en.wikipe
 console.log(typeof 42) // -> "number"
 console.log(typeof 3.14159) // -> "number"
 ```
-
----
-
-##  Programming with JavaScript: Strings
-
-Strings are  represent numeric values. Note that there is only *one* number type,
-represented in [64-bit double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
-
-```js
-42
-3.14159
-
-console.log(typeof 42) // -> "number"
-console.log(typeof 3.14159) // -> "number"
-```
-
 ---
 
 ## Conditionals
@@ -405,4 +467,5 @@ Details of the object model
 * Prototype-based OOP
 * Creating object hierarchies
 * Inheritance
+
 ---
