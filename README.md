@@ -295,37 +295,37 @@ var singleQuoted = 'This uses single quotes.';
 ##  Programming with JavaScript: Strings
 
 Strings have methods and properties defined on the 
-`[String.prototype]`[String Instance Methods] object:
+`[String.prototype]` object:
 
 - `.length`: Returns the number of characters in the string
 
 --
-```
-"hello".length === 5
-```
-
---
-- `.charAt(index)`: Returns the character at `index`.
-
---
-```
-"hello".charAt(1) === 'e'
+```js
+"hello".length // => 5
 ```
 
 --
-- `.replace(old, new)`: Replaces `old` with `new` in the string.
+- `.charAt(index)`: Returns the character at `index`
 
 --
+```js
+"hello".charAt(1) // => 'e'
 ```
+
+--
+- `.replace(old, new)`: Replaces `old` with `new` in the string
+
+--
+```js
 "Java is the best".replace("Java", "JavaScript");
 // => "JavaScript is the best"
 ```
 
 --
-[And many more][String Instance Methods]
+[And many more][String Instances]
 
 [String.prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description
-[String Instance Methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances
+[String Instances]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances
 ---
 
 ##  Programming with JavaScript: Booleans
