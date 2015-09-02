@@ -170,28 +170,17 @@ course.instructor = bebarber;
 ```
 
 ---
+name: syntax
 
 ## Programming with JavaScript: Syntax
-
-name: syntax
 
 JavaScript syntax is inspired by C/Java
 
 - Statements: group of words, numbers, or operators that perform a certain task
-
---
 - Expressions: variable reference, value, or set of values, possibly combined with operations
-
---
 - Declarations: expressions that define variables (containers of values) or functions
-
---
 - Operators: symbols that perform an operation on one or more operands
-
---
 - Whitespace: spaces, tabs, newlines which separate variables, values, operators, and other tokens
-
---
 - Comments: source code that is not evaluated, used for documentation and clarification
 
 ---
@@ -199,21 +188,14 @@ JavaScript syntax is inspired by C/Java
 ##  Programming with JavaScript: Syntax
 
 - Programs are made up of statements
-
---
 - Statements are made up of expressions
-
---
 - Expressions come in many flavors
-
---
 - Whitespace separates tokens and provides organization
-
---
 
 [Esprima Parser](http://esprima.org/demo/parse.html)
 
 ---
+name: comments
 
 ##  Programming with JavaScript: Comments
 
@@ -233,6 +215,7 @@ var foo = "bar"; // Everything after // is ignored
 Comments are a crucial language feature. Use them.
 
 ---
+name: declaring-variables
 
 ##  Programming with JavaScript: Variable Declarations
 
@@ -258,12 +241,8 @@ Variables can be optionally initialized with a value.
 ##  Programming with JavaScript: Variables
 
 - Variables exist in one of two scopes: global scope or function scope
-
---
   * No "block" scope
-
---
-* Variables do not have a type
+- Variables do not have a type
 
 ```js
 var a;
@@ -273,29 +252,32 @@ a = 0;
 typeof(a) // number
 ```
 
---
-* Variables declarations are "hoisted"
+- Variables declarations are "[hoisted]"
+
+[hoisted]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
 
 ---
+name: values-and-types
 
 ##  Programming with JavaScript: Values and Types
 
-name: values-and-types
-
 JavaScript has 6 primitive data types:
 
- - string - a sequence of characters, "Howdy"
- - number - any numeric value, 42, or 3.141592
- - boolean -  true and false.
- - null -  a special keyword denoting a null value
- - undefined - a value automatically assigned to variables don't yet have a value
+ - string - a sequence of characters, `"Howdy"` or `'Howdy'`
+ - number - any numeric value, `42`, or `3.141592`
+ - boolean -  `true` and `false`
+ - null -  a special keyword denoting a `null` value
+ - undefined - a value automatically assigned to variables that don't yet have a value
  - symbol - new in ECMAScript 6
+
+--
 
 And one complex data type:
 
  - object - containers that have properties, and often methods, constructors, and prototypes
 
 ---
+name: strings
 
 ##  Programming with JavaScript: Strings
 
@@ -303,29 +285,46 @@ A string literal is zero or more characters enclosed in double (") or single (')
 quotation marks.
 
 ```js
-var doubleQuoted = "This is a double-quoted string"
-var singleQuoted = 'This uses single quotes.'
+var doubleQuoted = "This is a double-quoted string";
+var singleQuoted = 'This uses single quotes.';
 ```
 
 ---
 
 ##  Programming with JavaScript: Strings
 
-Strings have methods and properties defined on the `String.prototype` object:
+Strings have methods and properties defined on the 
+`[String.prototype]`[String Instance Methods] object:
 
 - `.length`: Returns the number of characters in the string
+
+--
 ```
 "hello".length === 5
 ```
+
+--
 - `.charAt(index)`: Returns the character at `index`.
+
+--
 ```
 "hello".charAt(1) === 'e'
 ```
+
+--
 - `.replace(old, new)`: Replaces `old` with `new` in the string.
+
+--
 ```
 "Java is the best".replace("Java", "JavaScript");
 // => "JavaScript is the best"
 ```
+
+--
+[And many more][String Instance Methods]
+
+[String.prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description
+[String Instance Methods]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances
 ---
 
 ##  Programming with JavaScript: Booleans
