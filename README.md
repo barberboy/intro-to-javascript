@@ -329,10 +329,9 @@ Strings have methods and properties defined on the
 ```
 
 --
-[And many more][String Instances]
+[And many more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances)
 
 [String.prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description
-[String Instances]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances
 
 ---
 slide: numbers
@@ -376,7 +375,15 @@ var price = 3;
 price.toFixed(2) => "3.00"
 ```
 
-[toFixed]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+[toFixed]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+
+---
+
+##  Programming with JavaScript: Math
+
+The global `[Math]` object has utilities for dealing with numbers.
+
+[Math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 ---
 
