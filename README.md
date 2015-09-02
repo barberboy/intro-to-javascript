@@ -173,6 +173,8 @@ course.instructor = bebarber;
 
 ## Programming with JavaScript: Syntax
 
+name: syntax
+
 JavaScript syntax is inspired by C/Java
 
 - Statements: group of words, numbers, or operators that perform a certain task
@@ -277,6 +279,8 @@ typeof(a) // number
 ---
 
 ##  Programming with JavaScript: Values and Types
+
+name: values-and-types
 
 JavaScript has 6 primitive data types:
 
