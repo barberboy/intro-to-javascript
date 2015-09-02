@@ -302,7 +302,7 @@ typeof(singleChar)   // "string"
 ##  Programming with JavaScript: Strings
 
 Strings have methods and properties defined on the 
-`[String.prototype]` object:
+[`String.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description) object:
 
 - `.length`: Returns the number of characters in the string
 
@@ -331,8 +331,6 @@ Strings have methods and properties defined on the
 --
 [And many more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances)
 
-[String.prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description
-
 ---
 slide: numbers
 
@@ -354,7 +352,7 @@ typeof(pi)     // -> "number"
 ##  Programming with JavaScript: Numbers
 
 Numbers have a few methods and properties defined on the 
-`[Number.prototype]` object:
+[`Number.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Methods_2) object:
 
 - `.toString()`: Returns the value of the number as a string
 
@@ -365,25 +363,32 @@ days.toString(); => "30"
 ```
 
 --
-- `[.toFixed([digits])][toFixed]`: Returns the number as a string, rounded to `digits` digits and padded if necessary.
+- [`.toFixed(digits)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed):
+  Returns the number as a string, rounded to `digits` digits and padded if necessary.
 
 --
 ```js
 var pi = 3.141592654;
-pi.toFixed(2); => "3.14"
+pi.toFixed(4);   => "3.1416"
 var price = 3;
 price.toFixed(2) => "3.00"
 ```
 
-[toFixed]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
-
 ---
 
-##  Programming with JavaScript: Math
+##  Programming with JavaScript: <br>Math
 
-The global `[Math]` object has utilities for dealing with numbers.
+The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object has utilities for dealing with numbers.
 
-[Math]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+- Math.round(x): Returns the value of a number rounded to the nearest integer.
+- Math.trunc(x): Returns the integral part of the number x, removing any fractional digits.
+- Math.ceil(x): Returns the smallest integer greater than or equal to a number.
+- Math.floor(x): Returns the largest integer less than or equal to a number.
+- Math.max([x[, y[, …]]]): Returns the largest of zero or more numbers.
+- Math.min([x[, y[, …]]]): Returns the smallest of zero or more numbers.
+- Math.pow(x, y): Returns base to the exponent power, that is, baseexponent.
+- Math.random(): Returns a pseudo-random number between 0 and 1.
+- Math.abs(x): Returns the absolute value of a number.
 
 ---
 
@@ -410,18 +415,7 @@ console.log(typeof false) // -> "boolean"
 
 ---
 
-Grammar and types
------------------
-* Basic syntax & comments
-* Declarations
-* Variable scope
-* Variable hoisting
-* Data structures and types
-* Literals
-
----
-
-Control flow and error handling
+## Control flow and error handling
 -------------------------------
 * if...else
 * switch
@@ -463,39 +457,9 @@ Expressions and operators
 
 ---
 
-Numbers and dates
------------------
-* Number literals
-* Number object
-* Math object
-* Date object
-
----
-
-Text formatting
----------------
-* String literals
-* String object
-* Template strings
-* Internationalization
-* Regular Expressions
-
----
-
 Indexed collections
 -------------------
 * Arrays
-* Array comprehensions
-* Typed arrays
-
----
-
-Keyed collections
------------------
-* Map
-* WeakMap
-* Set
-* WeakSet
 
 ---
 
