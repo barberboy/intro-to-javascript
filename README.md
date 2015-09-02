@@ -282,13 +282,20 @@ name: strings
 
 ##  Programming with JavaScript: Strings
 
-A string literal is zero or more characters enclosed in double (") or single (')
-quotation marks.
+A [string literal] is zero or more characters enclosed in double (") or single
+(') quotation marks. There is no separate "char" type for individual characters.
 
 ```js
 var doubleQuoted = "This is a double-quoted string";
-var singleQuoted = 'This uses single quotes.';
+var singleQuoted = 'This uses single quotes';
+var singleChar = 'a';
+
+typeof(doubleQuoted) // "string"
+typeof(singleQuoted) // "string"
+typeof(singleChar)   // "string"
 ```
+
+[string literal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#String_literals
 
 ---
 
@@ -326,38 +333,66 @@ Strings have methods and properties defined on the
 
 [String.prototype]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description
 [String Instances]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances
----
-
-##  Programming with JavaScript: Booleans
-
-Booleans represent one of two values: `true` or `false`
-
-```js
-true
-false
-```
-```js
-console.log(typeof true) // -> "boolean"
-console.log(typeof false) // -> "boolean"
-```
---
-
-(`typeof` operator returns a variable's type)
 
 ---
+slide: numbers
 
-##  Programming with JavaScript: Number
+##  Programming with JavaScript: Numbers
 
 Numbers represent numeric values. Note that there is only *one* number type,
 represented in [64-bit double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
 
 ```js
-42
-3.14159
+var answer = 42;
+var pi = 3.14159;
 
-console.log(typeof 42) // -> "number"
-console.log(typeof 3.14159) // -> "number"
+typeof(answer) // -> "number"
+typeof(pi)     // -> "number"
 ```
+
+---
+
+##  Programming with JavaScript: Numbers
+
+Numbers have a few methods and properties defined on the 
+`[Number.prototype]` object:
+
+- `.toString()`: Returns the value of the number as a string
+
+--
+```js
+var days = 30;
+days.toString(); => "30"
+```
+
+--
+- `[.toFixed([digits])][toFixed]`: Returns the number as a string, rounded to `digits` digits and padded if necessary.
+
+--
+```js
+var pi = 3.141592654;
+pi.toFixed(2); => "3.14"
+var price = 3;
+price.toFixed(2) => "3.00"
+```
+
+[toFixed]:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+
+---
+
+##  Programming with JavaScript: Booleans
+
+Booleans represent one of two values: `true` or `false`. The keyword `true`
+(lowercase) and `false` (lowercase) are the only two boolean types.
+
+```js
+var answer = true;
+var differentAnswer = false;
+
+typeof (true) // -> "boolean"
+console.log(typeof false) // -> "boolean"
+```
+
 ---
 
 ## Conditionals
