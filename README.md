@@ -242,14 +242,15 @@ Variables can be optionally initialized with a value.
 
 - Variables exist in one of two scopes: global scope or function scope
   * No "block" scope
-- Variables do not have a type
+- Variables do not have a type; **values** have a type
 
 ```js
 var a;
+typeof(a) // "undefined"
 a = "a";
-typeof(a) // string
+typeof(a) // "string"
 a = 0;
-typeof(a) // number
+typeof(a) // "number"
 ```
 
 - Variables declarations are "[hoisted]"
