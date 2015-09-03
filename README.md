@@ -1,4 +1,7 @@
 class: middle, center
+highlightLanguage: javascript
+highlightLines: true
+highlightSpans: true
 
 JavaScript Programming
 ======================
@@ -227,14 +230,15 @@ var counter;
 
 Variables are containers for values. They store values and object references.
 
+Variables can be optionally initialized with a value when they are declared, 
+using the [Assignment (=) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Assignment_2)
+
 ```js
 var counter = 0;
 var course = {};
 console.log(counter); // 0
 console.log(course);  // {}
 ```
-
-Variables can be optionally initialized with a value.
 
 ---
 
@@ -253,7 +257,7 @@ a = 0;
 typeof(a) // "number"
 ```
 
-- Variables declarations are "[hoisted]"
+- Variable declarations are "[hoisted]"
 
 [hoisted]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var#var_hoisting
 
@@ -298,37 +302,81 @@ typeof(singleChar)   // "string"
 [string literal]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#String_literals
 
 ---
+name: string-concatenation
+
+##  Programming with JavaScript: String Concatenation
+
+The [Addition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)
+(`+`) operator is used for string concatenation.
+
+```js
+var hello = "Hello";
+console.log( hello + " world" );
+// => "Hello world"
+```
+
+???
+
+The Addition, or "plus" operator is used to concatenate two strings together. 
+It is the only mathematical operator that can be used for strings, unlike
+languages like Ruby where you can do "hello" * 3 to get "hellohellohello".
+
+--
+```js
+var greeting = 'Hello ';
+var subject = 'World';
+
+greeting += subject; // same as: `greeting = greeting + subject`
+
+console.log( greeting );
+// => "Hello world"
+```
+
+???
+
+You can also use the Addition Assignment operator, which is the equivalent of
+doing `hello = hello + "Hello"`.
+
+---
 
 ##  Programming with JavaScript: Strings
 
 Strings have methods and properties defined on the 
 [`String.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description) object:
 
-- `.length`: Returns the number of characters in the string
-
 --
+- `.length`: A property which reflects the number of characters in the string
+--
+
 ```js
 "hello".length // => 5
 ```
 
 --
-- `.charAt(index)`: Returns the character at `index`
-
+- `.charAt(index)`: Method which returns the character at `index`
 --
+
 ```js
 "hello".charAt(1) // => 'e'
 ```
 
 --
-- `.replace(old, new)`: Replaces `old` with `new` in the string
-
+- `.replace(old, new)`: Method which returns a new string with `old` replaced with with `new`
 --
+
 ```js
 "Java is the best".replace("Java", "JavaScript");
 // => "JavaScript is the best"
 ```
 
+???
+
+Now, a caveat with the 'replace' method: it only replaces the *first* instance
+of `old` with `new`. If we need to do multiple replacements, we need to use
+regular expressions.
+
 --
+
 [And many more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances)
 
 ---
