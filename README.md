@@ -426,17 +426,77 @@ price.toFixed(2) => "3.00"
 
 ##  Programming with JavaScript: <br>Math
 
-The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object has utilities for dealing with numbers.
+The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+object has utilities for dealing with numbers.
 
+--
 - Math.round(x): Returns the value of a number rounded to the nearest integer.
+--
+
+```js
+Math.round(3.14)  // => 3
+Math.round(1.618) // => 2
+Math.round(-3.14)  // => -3
+Math.round(-1.618) // => -2
+```
+
+--
 - Math.trunc(x): Returns the integral part of the number x, removing any fractional digits.
+--
+
+```js
+Math.trunc(3.14)  // => 3
+Math.trunc(1.618) // => 1
+Math.trunc(-3.14)  // => -3
+Math.trunc(-1.618) // => -1
+```
+
+---
+
+##  Programming with JavaScript: <br>Math
+
+The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+object has utilities for dealing with numbers.
+
 - Math.ceil(x): Returns the smallest integer greater than or equal to a number.
+--
+
+```js
+Math.ceil(3.14)  // => 4
+Math.ceil(1.618) // => 2
+Math.ceil(-3.14)  // => -3
+Math.ceil(-1.618) // => -1
+```
+
+--
 - Math.floor(x): Returns the largest integer less than or equal to a number.
-- Math.max([x[, y[, …]]]): Returns the largest of zero or more numbers.
-- Math.min([x[, y[, …]]]): Returns the smallest of zero or more numbers.
-- Math.pow(x, y): Returns base to the exponent power, that is, baseexponent.
-- Math.random(): Returns a pseudo-random number between 0 and 1.
-- Math.abs(x): Returns the absolute value of a number.
+--
+
+```js
+Math.floor(3.14)  // => 3
+Math.floor(1.618) // => 1
+Math.floor(-3.14)  // => -4
+Math.floor(-1.618) // => -2
+```
+
+---
+
+##  Programming with JavaScript: <br>Math
+
+Additional utilities:
+
+<dl>
+<dt>Math.max([x[, y[, …]]])</dt>
+<dd>Returns the largest of zero or more numbers.</dd>
+<dt>Math.min([x[, y[, …]]])</dt>
+<dd>Returns the smallest of zero or more numbers.</dd>
+<dt>Math.pow(x, y)</dt>
+<dd>Returns base to the exponent power, that is, base<sup>exponent</sup>.</dd>
+<dt>Math.random()</dt>
+<dd>Returns a pseudo-random number between 0 and 1.</dd>
+<dt>Math.abs(x)</dt>
+<dd>Returns the absolute value of a number.</dd>
+</dl>
 
 ---
 
