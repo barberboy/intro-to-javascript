@@ -8,8 +8,17 @@ JavaScript Programming
 
 ### An introduction to programming with JavaScript.
 
----
 
+
+---
+class: middle, center
+name: what-is-javascript
+
+# What is JavaScript
+
+
+
+---
 ## What is JavaScript
 
 - Scripting language for the browser
@@ -20,7 +29,7 @@ JavaScript Programming
 - [JavaScript Jabber interview with Brendan Eich](http://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich)
 
 ---
-
+#### What is JavaScript
 ## JavaScript Standardization
 
 - JScript implemented by Microsoft for Internet Explorer in 1996
@@ -30,7 +39,7 @@ JavaScript Programming
 - Collaboration between Netscape, Microsoft, Borland, and a few others
 
 ---
-
+#### What is JavaScript
 ## ECMAScript
 
 - Language evolved: ES3, ES3.1
@@ -40,7 +49,7 @@ JavaScript Programming
 - ES7 / ES 2016
 
 ---
-
+#### What is JavaScript
 ## Server-side JavaScript
 
 - [Node.js](http://nodejs.org)
@@ -51,6 +60,7 @@ JavaScript Programming
 - [npm package repository](npmjs.com)
 
 ---
+#### What is JavaScript
 ## Writing JavaScript
 
 - Source code saved in a `.js` file (like "`application.js`")
@@ -66,9 +76,18 @@ JavaScript Programming
 node application.js
     ```
 
----
 
-## JavaScript Programming Language
+
+---
+class: middle, center
+
+# JavaScript Language Features
+
+
+
+
+---
+## JavaScript Language Features
 
 > _ECMAScript is an object-oriented programming language for performing computations and manipulating computational objects within a host environment._
 
@@ -79,103 +98,103 @@ receive input from that environment, manipulate it, and provide client-server
 communication.
 
 ---
-
 ## JavaScript Language Features
 
-Syntax based on C/Java
+- Syntax based on C/Java
 
-Interpreted
-- There is a compilation stage, but it happens immediately before execution.
+- Interpreted
+  - There is a compilation stage, but it happens immediately before execution.
 
-Dynamically Typed
-- All variable references are declared with 'var' keyword
-- No `int`, `char`, `double` variable types
+- Dynamically Typed
+  - All variable references are declared with 'var' keyword
+  - No `int`, `char`, `double` variable types
  
-```c
-// C
-int index = 0;
-char flag = 's';
-```
-
-```js
-// JavaScript
-var index = 0;
-var flag = 's';
-```
-
+    ```c
+    // C
+    int index = 0;
+    char flag = 's';
+    ```
+    
+    ```js
+    // JavaScript
+    var index = 0;
+    var flag = 's';
+    ```
 ---
 ## JavaScript Language Features
 
-Dynamically typed
-- Variables do not have a type
-- BUT
-- <u>Values</u> _are_ typed
+- Dynamically typed
+  - Variables do not have a type
+  - BUT
+  - <u>Values</u> _are_ typed
   
-```js
-var index = 0  // number type
-var flag = 's' // string type
-typeof(index)  // -> "number"
-typeof(flag)   // -> "string"
-flag = 0 
-typeof(flag)   // -> "number"
-```
-
+    ```js
+    var index = 0  // number type
+    var flag = 's' // string type
+    typeof(index)  // -> "number"
+    typeof(flag)   // -> "string"
+    flag = 0 
+    typeof(flag)   // -> "number"
+    ```
 ---
-
 ## JavaScript Language Features
 
-Object-based
+- Object-based
 
-- But not traditionally object-oriented
-- Objects are created from functions, object literals, or Object.create, but
-*not* from classes
-- Inheritance is prototype-based, not class-based
-
----
-
-## JavaScript Language Features
-
-First-class functions. Functions can be:
-
-* Assigned to variables
-* Properties of objects
-* Passed to other functions
-* Returned by functions
+  - But not traditionally object-oriented
+  - Objects are created from functions, object literals, or Object.create, but
+  *not* from classes
+  - Inheritance is prototype-based, not class-based
 
 ---
-
 ## JavaScript Language Features
 
-Functions as Constructors
+- First-class functions. Functions can be:
 
-- Functions are used to create new objects:
-
-```js
-function Teacher(name) {
-    this.name = name;
-}
-var bebarber = new Teacher("Benjamin Barber");
-console.log(bebarber.name); // -> "Benjamin Barber"
-```
+  - Assigned to variables
+  - Properties of objects
+  - Passed to other functions
+  - Returned by functions
 
 ---
-
 ## JavaScript Language Features
 
-Dynamic objects
+- Functions as Constructors
+
+  - Functions are used to create new objects:
+
+    ```js
+    function Teacher(name) {
+        this.name = name;
+    }
+    var bebarber = new Teacher("Benjamin Barber");
+    console.log(bebarber.name); // -> "Benjamin Barber"
+    ```
+---
+## JavaScript Language Features
+
+- Dynamic objects
 
   - Properties can be added to objects simply by assigning a value to them
 
-```js
-var course = {};
-course.name = "Web Technologies";
-course.instructor = bebarber;
-```
+    ```js
+    var course = {};
+    course.name = "Web Technologies";
+    course.instructor = bebarber;
+    ```
+
+
 
 ---
 name: syntax
+class: middle, center
 
-## Programming with JavaScript: Syntax
+# JavaScript Syntax
+
+
+
+---
+## JavaScript Syntax
 
 JavaScript syntax is inspired by C/Java
 
@@ -187,8 +206,7 @@ JavaScript syntax is inspired by C/Java
 - Comments: source code that is not evaluated, used for documentation and clarification
 
 ---
-
-##  Programming with JavaScript: Syntax
+## JavaScript Syntax
 
 - Programs are made up of statements
 - Statements are made up of expressions
@@ -197,22 +215,34 @@ JavaScript syntax is inspired by C/Java
 
 [Esprima Parser](http://esprima.org/demo/parse.html)
 
+
+
+---
+name: javascript-programming
+class: middle, center
+
+# Programming with JavaScript
+
+
+
 ---
 name: comments
 
-##  Programming with JavaScript: Comments
+#### Programming with JavaScript
+##  Comments
 
-- C-style line and block comments
+- C-style line comments
 
-```js
-// This entire line is ignored
+  ```js
+  // This entire line is ignored
+  var foo = "bar"; // Everything after // is ignored
+  ```
+- and block comments
 
-var foo = "bar"; // Everything after // is ignored
-
-/* This is a multi-line
-   comment.
-*/
-```
+  ```js
+  /* This is a comment that extends
+     to the second line */
+  ```
 --
 
 Comments are a crucial language feature. Use them.
@@ -220,7 +250,8 @@ Comments are a crucial language feature. Use them.
 ---
 name: declaring-variables
 
-##  Programming with JavaScript: Variable Declarations
+#### Programming with JavaScript
+## Variable Declarations
 
 The `var` keyword is used to declare a variable:
 
@@ -241,8 +272,8 @@ console.log(course);  // {}
 ```
 
 ---
-
-##  Programming with JavaScript: Variables
+#### Programming with JavaScript
+##  Variables
 
 - Variables exist in one of two scopes: global scope or function scope
   * No "block" scope
@@ -264,7 +295,8 @@ typeof(a) // "number"
 ---
 name: values-and-types
 
-##  Programming with JavaScript: Values and Types
+#### Programming with JavaScript
+## Values and Types
 
 JavaScript has 6 primitive data types:
 
@@ -283,8 +315,8 @@ And one complex data type:
 
 ---
 name: strings
-
-##  Programming with JavaScript: Strings
+#### Programming with JavaScript
+## Strings
 
 A [string literal] is zero or more characters enclosed in double (") or single
 (') quotation marks. There is no separate "char" type for individual characters.
@@ -304,7 +336,8 @@ typeof(singleChar)   // "string"
 ---
 name: string-concatenation
 
-##  Programming with JavaScript: String Concatenation
+#### Programming with JavaScript
+## String Concatenation
 
 The [Addition](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition)
 (`+`) operator is used for string concatenation.
@@ -338,8 +371,8 @@ You can also use the Addition Assignment operator, which is the equivalent of
 doing `hello = hello + "Hello"`.
 
 ---
-
-##  Programming with JavaScript: Strings
+#### Programming with JavaScript
+##  String Properties and Methods
 
 Strings have methods and properties defined on the 
 [`String.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description) object:
@@ -380,9 +413,9 @@ regular expressions.
 [And many more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances)
 
 ---
-slide: numbers
-
-##  Programming with JavaScript: Numbers
+name: numbers
+#### Programming with JavaScript
+## Numbers
 
 Numbers represent numeric values. Note that there is only *one* number type,
 represented in [64-bit double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
@@ -391,13 +424,13 @@ represented in [64-bit double-precision floating-point format](https://en.wikipe
 var answer = 42;
 var pi = 3.14159;
 
-typeof(answer) // -> "number"
-typeof(pi)     // -> "number"
+typeof(answer) // => "number"
+typeof(pi)     // => "number"
 ```
 
 ---
-
-##  Programming with JavaScript: Numbers
+#### Programming with JavaScript
+## Number Properties and Methods
 
 Numbers have a few methods and properties defined on the 
 [`Number.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Methods_2) object:
@@ -407,7 +440,7 @@ Numbers have a few methods and properties defined on the
 --
 ```js
 var days = 30;
-days.toString(); => "30"
+days.toString(); // => "30"
 ```
 
 --
@@ -417,14 +450,45 @@ days.toString(); => "30"
 --
 ```js
 var pi = 3.141592654;
-pi.toFixed(4);   => "3.1416"
+pi.toFixed(4);   // => "3.1416"
 var price = 3;
-price.toFixed(2) => "3.00"
+price.toFixed(2) // => "3.00"
 ```
+---
+name: operators
+#### Programming with JavaScript
+## Operators: Arithmetic
+
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division
+  - Modulus
 
 ---
+#### Programming with JavaScript
+## Operators: Arithmetic Assignment
 
-##  Programming with JavaScript: <br>Math
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division
+  - Modulus
+
+---
+name: bitwise-operators
+#### Programming with JavaScript
+## Operators: Bitwise Operators
+
+- Treat their operands as 32-bit binary numbers, converting as necessary
+- Returns standard numerical values
+
+Reference: [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+
+---
+#### Programming with JavaScript
+## Math
 
 The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 object has utilities for dealing with numbers.
@@ -434,8 +498,8 @@ object has utilities for dealing with numbers.
 --
 
 ```js
-Math.round(3.14)  // => 3
-Math.round(1.618) // => 2
+Math.round(3.14)   // => 3
+Math.round(1.618)  // => 2
 Math.round(-3.14)  // => -3
 Math.round(-1.618) // => -2
 ```
@@ -445,15 +509,14 @@ Math.round(-1.618) // => -2
 --
 
 ```js
-Math.trunc(3.14)  // => 3
-Math.trunc(1.618) // => 1
+Math.trunc(3.14)   // => 3
+Math.trunc(1.618)  // => 1
 Math.trunc(-3.14)  // => -3
 Math.trunc(-1.618) // => -1
 ```
-
 ---
-
-##  Programming with JavaScript: <br>Math
+#### Programming with JavaScript
+## Math
 
 The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 object has utilities for dealing with numbers.
@@ -462,8 +525,8 @@ object has utilities for dealing with numbers.
 --
 
 ```js
-Math.ceil(3.14)  // => 4
-Math.ceil(1.618) // => 2
+Math.ceil(3.14)   // => 4
+Math.ceil(1.618)  // => 2
 Math.ceil(-3.14)  // => -3
 Math.ceil(-1.618) // => -1
 ```
@@ -473,15 +536,15 @@ Math.ceil(-1.618) // => -1
 --
 
 ```js
-Math.floor(3.14)  // => 3
-Math.floor(1.618) // => 1
+Math.floor(3.14)   // => 3
+Math.floor(1.618)  // => 1
 Math.floor(-3.14)  // => -4
 Math.floor(-1.618) // => -2
 ```
 
 ---
-
-##  Programming with JavaScript: <br>Math
+#### Programming with JavaScript
+## Math
 
 Additional utilities:
 
@@ -499,8 +562,8 @@ Additional utilities:
 </dl>
 
 ---
-
-##  Programming with JavaScript: Booleans
+#### Programming with JavaScript
+## Booleans
 
 Booleans represent one of two values: `true` or `false`. The keyword `true`
 (lowercase) and `false` (lowercase) are the only two boolean types.
@@ -509,39 +572,39 @@ Booleans represent one of two values: `true` or `false`. The keyword `true`
 var answer = true;
 var differentAnswer = false;
 
-typeof (true) // -> "boolean"
-console.log(typeof false) // -> "boolean"
+console.log(typeof answer) // => "boolean"
 ```
 
 ---
-
+#### Programming with JavaScript
 ## Conditionals
 
----
+* if...else
+* ternary operator
 
+---
+#### Programming with JavaScript
+## Logical Operators
+
+* Logical AND
+* Logical OR
+* Logical NOT
+
+---
+#### Programming with JavaScript
 ## Truthiness
 
 ---
 
-## Control flow and error handling
--------------------------------
-* if...else
-* switch
-* try/catch/throw
-* Error objects
-* Promises
-
 ---
-
-Loops and iteration
--------------------
+#### Programming with JavaScript
+## Loops and iteration
 
 * for
 * while
 * do...while
 * break/continue
 * for..in
-* for..of
 
 ---
 
@@ -553,15 +616,6 @@ Functions
 * Closures
 * Arguments & parameters
 * Arrow functions
-
----
-
-Expressions and operators
--------------------------
-* Assignment & Comparisons
-* Arithmetic operators
-* Bitwise & logical operators
-* Conditional (ternary) operator
 
 ---
 
@@ -585,5 +639,3 @@ Details of the object model
 * Prototype-based OOP
 * Creating object hierarchies
 * Inheritance
-
----
