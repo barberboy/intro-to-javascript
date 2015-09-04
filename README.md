@@ -313,8 +313,19 @@ And one complex data type:
 
  - object - containers that have properties, and often methods, constructors, and prototypes
 
+
+
 ---
 name: strings
+class: middle, center
+
+# Programming with JavaScript
+# Strings
+
+
+
+
+---
 #### Programming with JavaScript
 ## Strings
 
@@ -412,8 +423,18 @@ regular expressions.
 
 [And many more](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances)
 
+
+
 ---
 name: numbers
+class: middle, center
+
+# Programming with JavaScript
+# Numbers
+
+
+
+---
 #### Programming with JavaScript
 ## Numbers
 
@@ -560,6 +581,17 @@ Additional utilities:
 <dt>Math.abs(x)</dt>
 <dd>Returns the absolute value of a number.</dd>
 </dl>
+
+
+
+---
+name: booleans
+class: middle, center
+
+# Programming with JavaScript
+# Booleans
+
+
 
 ---
 #### Programming with JavaScript
