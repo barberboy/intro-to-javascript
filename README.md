@@ -566,7 +566,7 @@ name: bitwise-operators
 #### Programming with JavaScript
 ## Operators: Bitwise Operators
 
-- Treat their operands as 32-bit binary numbers, converting as necessary
+- Treats operands as 32-bit binary numbers, converting as necessary
 - Returns standard numerical values
 
 Reference: [Bitwise Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
@@ -635,19 +635,19 @@ Math.floor(-1.618) // => -2
 Additional utilities:
 
 <dl>
-<dt>`Math.max([x[, y[, …]]])`</dt>
+<dt>Math.max([x[, y[, …]]])</dt>
 <dd>Returns the largest of zero or more numbers.</dd>
-<dt>`Math.min([x[, y[, …]]])`</dt>
+<dt>Math.min([x[, y[, …]]])</dt>
 <dd>Returns the smallest of zero or more numbers.</dd>
-<dt>`Math.pow(x, y)`</dt>
+<dt>Math.pow(x, y)</dt>
 <dd>Returns base to the exponent power, that is, base<sup>exponent</sup>.</dd>
-<dt>`Math.random()`</dt>
+<dt>Math.random()</dt>
 <dd>Returns a pseudo-random number between 0 and 1.</dd>
-<dt>`Math.abs(x)`</dt>
+<dt>Math.abs(x)</dt>
 <dd>Returns the absolute value of a number.</dd>
 </dl>
 
-
+Reference: [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
 ---
 name: booleans
