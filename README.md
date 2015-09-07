@@ -480,22 +480,87 @@ name: operators
 #### Programming with JavaScript
 ## Operators: Arithmetic
 
-  - Addition
-  - Subtraction
-  - Multiplication
-  - Division
-  - Modulus
+- `+` Addition operator
+  ```js
+  3 + 4 // => 7
+  ```
+- `-` Subtraction operator
+  ```js
+  3 - 4 // => -1
+  ```
+---
+#### Programming with JavaScript
+## Operators: Arithmetic
 
+- `*` Multiplication operator
+  ```js
+  3 * 4 // => 12
+  ```
+- `/` Division operator
+  ```js
+  3 / 4 // => 0.75
+  ```
+- `%` Remainder operator
+  ```js
+  4 % 3 // => 1
+  ```
 ---
 #### Programming with JavaScript
 ## Operators: Arithmetic Assignment
 
-  - Addition
-  - Subtraction
-  - Multiplication
-  - Division
-  - Modulus
+- `+=` Addition assignment: adds the value of the right operand to a variable and 
+  assigns the result to the variable
+  ```js
+  var x = 10;
+  x += 5;    // Equivalent to: x = x + 5
+  ```
+--
+- `-=` Subtraction assignment
+- `*=` Multiplication assignment
+- `/=` Division assignment 
+- `%=` Modulus assignment 
 
+[Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment_Operators#Addition_assignment_2)
+on MDN
+
+---
+
+#### Programming with JavaScript
+## Operators: Increment
+
+- `++` Increment operator: increase a reference’s value by one and return the new value
+
+
+--
+  - Postfix: Return the original value **before** incrementing
+    ```js
+    var a = 3;
+    var b = a++;     // b: 3, a: 4
+    ```
+
+--
+  - Prefix: Return the new (incremented) value
+    ```js
+    var a = 3;
+    var b = ++a;     // b: 4, a: 4
+    ```
+
+---
+
+#### Programming with JavaScript
+## Operators: Decrement
+
+- `--` Decrement operator: decrease a reference’s value by one and return the new value
+  - Postfix: Return the original value **before** decrementing
+    ```js
+    var a = 3;
+    var b = a--;     // b: 3, a: 2
+    ```
+  - Prefix: Return the new (decremented) value
+    ```js
+    var a = 3;
+    var b = --a;     // b: 2, a: 2
+    ```
 ---
 name: bitwise-operators
 #### Programming with JavaScript
@@ -519,8 +584,8 @@ object has utilities for dealing with numbers.
 --
 
 ```js
-Math.round(3.14)   // => 3
-Math.round(1.618)  // => 2
+Math.round(3.14)   // =>  3
+Math.round(1.618)  // =>  2
 Math.round(-3.14)  // => -3
 Math.round(-1.618) // => -2
 ```
@@ -530,8 +595,8 @@ Math.round(-1.618) // => -2
 --
 
 ```js
-Math.trunc(3.14)   // => 3
-Math.trunc(1.618)  // => 1
+Math.trunc(3.14)   // =>  3
+Math.trunc(1.618)  // =>  1
 Math.trunc(-3.14)  // => -3
 Math.trunc(-1.618) // => -1
 ```
@@ -546,8 +611,8 @@ object has utilities for dealing with numbers.
 --
 
 ```js
-Math.ceil(3.14)   // => 4
-Math.ceil(1.618)  // => 2
+Math.ceil(3.14)   // =>  4
+Math.ceil(1.618)  // =>  2
 Math.ceil(-3.14)  // => -3
 Math.ceil(-1.618) // => -1
 ```
@@ -557,8 +622,8 @@ Math.ceil(-1.618) // => -1
 --
 
 ```js
-Math.floor(3.14)   // => 3
-Math.floor(1.618)  // => 1
+Math.floor(3.14)   // =>  3
+Math.floor(1.618)  // =>  1
 Math.floor(-3.14)  // => -4
 Math.floor(-1.618) // => -2
 ```
@@ -570,15 +635,15 @@ Math.floor(-1.618) // => -2
 Additional utilities:
 
 <dl>
-<dt>Math.max([x[, y[, …]]])</dt>
+<dt>`Math.max([x[, y[, …]]])`</dt>
 <dd>Returns the largest of zero or more numbers.</dd>
-<dt>Math.min([x[, y[, …]]])</dt>
+<dt>`Math.min([x[, y[, …]]])`</dt>
 <dd>Returns the smallest of zero or more numbers.</dd>
-<dt>Math.pow(x, y)</dt>
+<dt>`Math.pow(x, y)`</dt>
 <dd>Returns base to the exponent power, that is, base<sup>exponent</sup>.</dd>
-<dt>Math.random()</dt>
+<dt>`Math.random()`</dt>
 <dd>Returns a pseudo-random number between 0 and 1.</dd>
-<dt>Math.abs(x)</dt>
+<dt>`Math.abs(x)`</dt>
 <dd>Returns the absolute value of a number.</dd>
 </dl>
 
