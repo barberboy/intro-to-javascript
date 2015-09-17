@@ -775,7 +775,7 @@ console.log(0 === '');     // => false
 console.log(false === '0');// => false
 var x = {};
 var y = x;
-console.log(x == y);       // => true
+console.log(x === y);       // => true
 ```
 
 ---
@@ -798,9 +798,34 @@ console.log(1 !== 2)   // true
 ## Relational operators
 
 - `>` Greater than
+  ```
+  3 > 4 // => false
+  4 > 4 // => false
+  5 > 4 // => true
+  ```
 - `>=` Greater than or equal
+  ```
+  3 >= 4 // => false
+  4 >= 4 // => true
+  5 >= 4 // => true
+  ```
+  
+---
+#### Programming with JavaScript
+## Relational operators
+
 - `<` Less than operator
+  ```
+  3 < 4 // => true
+  4 < 4 // => false
+  5 < 4 // => false
+  ```
 - `<=` Less than or equal
+  ```
+  3 <= 4 // => true
+  4 <= 4 // => true
+  5 <= 4 // => false
+  ```
 
 [Relational operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators)
 
@@ -942,7 +967,35 @@ var day = false;
 
 JavaScript coerces primitives and objects to a Boolean when a Boolean is expected.
 
+--
 
+Truthy : a value is “truthy” if it is not “falsy.”
+
+---
+#### Programming with JavaScript
+## Falsy
+
+The following 6 values are considered `false` in a boolean context:
+
+- `false` 
+- `0`
+- `''` (empty string)
+- `null`
+- `undefined`
+- `NaN`
+
+---
+#### Programming with JavaScript
+## Truthy
+
+The following values (among many others) are considered `true` in a boolean context:
+
+- `true`
+- `"hi"`
+- `12`
+- `-1`
+- [] (empty array)
+- {} (empty object)
 
 ---
 #### Programming with JavaScript
