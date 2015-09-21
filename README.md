@@ -1,7 +1,4 @@
 class: middle, center
-highlightLanguage: javascript
-highlightLines: true
-highlightSpans: true
 
 JavaScript Programming
 ======================
