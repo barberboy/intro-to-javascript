@@ -995,14 +995,100 @@ The following values (among many others) are considered `true` in a boolean cont
 - {} (empty object)
 
 ---
+name: loops
+class: middle, center
+
+# Programming with JavaScript
+# Booleans
+
+---
 #### Programming with JavaScript
 ## Loops and iteration
 
-* for
 * while
 * do...while
+* for
 * break/continue
 * for..in
+
+---
+#### Programming with JavaScript
+## `while` loops
+
+Syntax:
+
+```
+while (condition)
+   statement
+```
+
+[`while` loop reference on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+
+---
+#### Programming with JavaScript
+## `while` loops
+
+Example:
+
+```
+var x = 0;
+
+while (x <= 10) {
+   console.log( x );
+   x++;
+}
+```
+
+---
+#### Programming with JavaScript
+## `for` loops
+
+Syntax:
+
+```
+for ([initialization]; [condition]; [final-expression])
+   statement
+```
+
+[`for` loop reference on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+
+---
+#### Programming with JavaScript
+## `for` loops
+
+Example:
+
+```
+for (var i = 1; i <= 10; i++) {
+   console.log( i );
+}
+```
+
+---
+#### Programming with JavaScript
+## `for` loops: Arrays
+
+A common use case for `for` loops is looping through array values:
+
+```
+var scores = [89, 98, 92, 69, 87, 53];
+for (var i = 0; i < scores.length; i++) {
+   console.log( scores[i] );
+}
+```
+
+---
+#### Programming with JavaScript
+## `for` loops: Arrays
+
+A quick performance optimization is to cache the length of the array:
+
+```
+var scores = [89, 98, 92, 69, 87, 53];
+for (var i = 0, len = scores.length; i < len; i++) {
+   console.log( scores[i] );
+}
+```
 
 ---
 
