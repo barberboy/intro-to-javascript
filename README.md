@@ -999,7 +999,7 @@ name: loops
 class: middle, center
 
 # Programming with JavaScript
-# Booleans
+# Loops and iteration
 
 ---
 #### Programming with JavaScript
@@ -1022,7 +1022,7 @@ while (condition)
    statement
 ```
 
-[`while` loop reference on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
+[`while` loop reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 
 ---
 #### Programming with JavaScript
@@ -1050,7 +1050,7 @@ for ([initialization]; [condition]; [final-expression])
    statement
 ```
 
-[`for` loop reference on MDN] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+[`for` loop reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 
 ---
 #### Programming with JavaScript
