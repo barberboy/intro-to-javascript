@@ -994,12 +994,16 @@ The following values (among many others) are considered `true` in a boolean cont
 - [] (empty array)
 - {} (empty object)
 
+
+
 ---
 name: loops
 class: middle, center
 
 # Programming with JavaScript
 # Loops and iteration
+
+
 
 ---
 #### Programming with JavaScript
@@ -1022,6 +1026,10 @@ while (condition)
    statement
 ```
 
+The while statement creates a loop that executes a specified statement as long 
+as the test condition evaluates to true. The condition is evaluated before
+executing the statement.
+
 [`while` loop reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/while)
 
 ---
@@ -1041,6 +1049,40 @@ while (x <= 10) {
 
 ---
 #### Programming with JavaScript
+## `do…while` loops
+
+Syntax:
+
+```
+do
+  statement 
+while (condition)
+   
+```
+
+The `do…while` statement creates a loop that executes `statement`  until the
+`condition` evaluates to false. Since the condition is evaluated after
+executing the statement, the specified statement will execute at least once.
+
+[`do…while` loop reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
+
+---
+#### Programming with JavaScript
+## `do…while` loops
+
+Example:
+
+```
+var x = 0;
+do {
+   x++;
+   console.log( x );
+} while (x <= 10)
+
+```
+
+---
+#### Programming with JavaScript
 ## `for` loops
 
 Syntax:
@@ -1050,7 +1092,7 @@ for ([initialization]; [condition]; [final-expression])
    statement
 ```
 
-[`for` loop reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
+[`for` reference on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
 
 ---
 #### Programming with JavaScript
@@ -1089,7 +1131,69 @@ for (var i = 0, len = scores.length; i < len; i++) {
    console.log( scores[i] );
 }
 ```
+---
+name: arrays
+class: middle, center
 
+# Programming with JavaScript
+# Arrays
+
+
+---
+#### Programming with JavaScript
+## Arrays
+
+An array is an ordered set of numerically-indexed values.
+
+--
+
+Arrays can be created using the global `Array` function (not recommended) or by
+using the [Array literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals): `[]`
+
+--
+
+```
+var empty = [];
+var scores = [88, 75, 84, 100, 77, 105, 86];
+var books = ["To Kill a Mockingbird", "Prince Caspian", "The Hitchhiker’s Guide to the Galaxy"]
+```
+
+--
+
+Array values can accessed (or assigned) by a numeric index
+
+```
+console.log( books[0] );  // => "To Kill a Mockingbird"
+books[0] = "Fellowship of the Ring";
+console.log( books[0] );  // => "Fellowship of the Ring"
+```
+
+--
+
+[Introduction to Arrays on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+
+---
+#### Programming with JavaScript
+## Array methods: push
+
+`push()` adds one or more elements to the end of an array and returns the resulting length of the array.
+
+```
+var myArray = ["1", "2"]
+myArray.push("3"); // myArray is now ["1", "2", "3"]
+```
+
+---
+#### Programming with JavaScript
+## Array methods: concat
+
+`concat()` joins two arrays and returns a new array
+
+```
+var myArray = ["1", "2", "3"]
+myArray = myArray.concat(["a", "b", "c"]);
+// myArray is now ["1", "2", "3", "a", "b", "c"]
+```
 ---
 
 Functions
