@@ -454,9 +454,7 @@ var pi = 3.141592654;
 pi.toFixed(4);   // => "3.1416"
 var price = 3;
 price.toFixed(2) // => "3.00"
-```
----
-name: operators
+```[ame: operato]s
 #### Programming with JavaScript
 ## Operators: Arithmetic
 
@@ -1160,7 +1158,7 @@ myArray = myArray.concat(["a", "b", "c"]);
 `join(deliminator = ',')` joins all elements of an array into a string.
 
 ```
-var myArray = new Array("Wind", "Rain", "Fire");
+var myArray = ["Wind", "Rain", "Fire"];
 var list = myArray.join(" - "); // list is "Wind - Rain - Fire"
 ```
 
@@ -1171,7 +1169,7 @@ var list = myArray.join(" - "); // list is "Wind - Rain - Fire"
 `push()` adds one or more elements to the end of an array and returns the resulting length of the array.
 
 ```
-var myArray = new Array("1", "2");
+var myArray = ["1", "2"];
 myArray.push("3"); // myArray is now ["1", "2", "3"]
 ```
 
@@ -1182,7 +1180,7 @@ myArray.push("3"); // myArray is now ["1", "2", "3"]
 `pop()` removes the last element from an array and returns that element.
 
 ```
-var myArray = new Array("1", "2", "3");
+var myArray = ["1", "2", "3"];
 var last = myArray.pop(); 
 // myArray is now ["1", "2"], last = "3"
 ```
@@ -1194,7 +1192,7 @@ var last = myArray.pop();
 `shift()` removes the first element from an array and returns that element.
 
 ```
-var myArray = new Array ("1", "2", "3");
+var myArray = ["1", "2", "3"];
 var first = myArray.shift(); 
 // myArray is now ["2", "3"], first is "1"
 ```
@@ -1206,7 +1204,7 @@ var first = myArray.shift();
 `unshift()` adds one or more elements to the front of an array and returns the new length of the array.
 
 ```
-var myArray = new Array ("1", "2", "3");
+var myArray = ["1", "2", "3"];
 myArray.unshift("4", "5"); 
 // myArray becomes ["4", "5", "1", "2", "3"]
 ```
@@ -1217,7 +1215,7 @@ myArray.unshift("4", "5");
 `slice(start_index, upto_index)` extracts a section of an array and returns a new array.
 
 ```
-var myArray = new Array ("a", "b", "c", "d", "e");
+var myArray = ["a", "b", "c", "d", "e"];
 myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
                                // until index 3, returning [ "b", "c", "d"]
 ```
@@ -1229,7 +1227,7 @@ myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
 `splice(index, count_to_remove, addElement1, addElement2, ...)` removes elements from an array and (optionally) replaces them.
 
 ```
-var myArray = new Array ("1", "2", "3", "4", "5");
+var myArray = ["1", "2", "3", "4", "5"];
 myArray.splice(1, 3, "a", "b", "c", "d"); 
 // myArray is now ["1", "a", "b", "c", "d", "5"]
 // This code started at index one (or where the "2" was), 
@@ -1244,7 +1242,7 @@ myArray.splice(1, 3, "a", "b", "c", "d");
 `reverse()` transposes the elements of an array: the first array element becomes the last and the last becomes the first.
 
 ```
-var myArray = new Array ("1", "2", "3");
+var myArray = ["1", "2", "3"];
 myArray.reverse(); 
 // transposes the array so that myArray = [ "3", "2", "1" ]
 ```
@@ -1256,7 +1254,7 @@ myArray.reverse();
 `sort([sortFunction])` sorts the elements of an array.
 
 ```
-var myArray = new Array("Wind", "Rain", "Fire");
+var myArray = ["Wind", "Rain", "Fire"];
 myArray.sort(); 
 // sorts the array so that myArray = [ "Fire", "Rain", "Wind" ]
 ```
