@@ -304,8 +304,6 @@ JavaScript has 6 primitive data types:
  - undefined - a value automatically assigned to variables that don't yet have a value
  - symbol - new in ECMAScript 6
 
---
-
 And one complex data type:
 
  - object - containers that have properties, and often methods, constructors, and prototypes
@@ -385,26 +383,17 @@ doing `hello = hello + "Hello"`.
 Strings have methods and properties defined on the 
 [`String.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype#Description) object:
 
---
 - `.length`: A property which reflects the number of characters in the string
---
-
 ```
 "hello".length // => 5
 ```
 
---
 - `.charAt(index)`: Method which returns the character at `index`
---
-
 ```
 "hello".charAt(1) // => 'e'
 ```
 
---
 - `.replace(old, new)`: Method which returns a new string with `old` replaced with with `new`
---
-
 ```
 "Java is the best".replace("Java", "JavaScript");
 // => "JavaScript is the best"
@@ -454,18 +443,12 @@ Numbers have a few methods and properties defined on the
 [`Number.prototype`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Methods_2) object:
 
 - `.toString()`: Returns the value of the number as a string
-
---
 ```
 var days = 30;
 days.toString(); // => "30"
 ```
-
---
 - [`.toFixed(digits)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed):
   Returns the number as a string, rounded to `digits` digits and padded if necessary.
-
---
 ```
 var pi = 3.141592654;
 pi.toFixed(4);   // => "3.1416"
@@ -511,7 +494,7 @@ name: operators
   var x = 10;
   x += 5;    // Equivalent to: x = x + 5
   ```
---
+
 - `-=` Subtraction assignment
 - `*=` Multiplication assignment
 - `/=` Division assignment 
@@ -590,9 +573,7 @@ on [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/We
 The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 object has utilities for dealing with numbers.
 
---
-- Math.round(x): Returns the value of a number rounded to the nearest integer.
---
+- `Math.round(x)` : Returns the value of a number rounded to the nearest integer.
 
 ```
 Math.round(3.14)   // =>  3
@@ -601,9 +582,7 @@ Math.round(-3.14)  // => -3
 Math.round(-1.618) // => -2
 ```
 
---
-- Math.trunc(x): Returns the integral part of the number x, removing any fractional digits.
---
+- `Math.trunc(x)` : Returns the integral part of the number x, removing any fractional digits.
 
 ```
 Math.trunc(3.14)   // =>  3
@@ -618,8 +597,7 @@ Math.trunc(-1.618) // => -1
 The global [`Math`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 object has utilities for dealing with numbers.
 
-- Math.ceil(x): Returns the smallest integer greater than or equal to a number.
---
+- `Math.ceil(x)` : Returns the smallest integer greater than or equal to a number.
 
 ```
 Math.ceil(3.14)   // =>  4
@@ -628,9 +606,7 @@ Math.ceil(-3.14)  // => -3
 Math.ceil(-1.618) // => -1
 ```
 
---
-- Math.floor(x): Returns the largest integer less than or equal to a number.
---
+- `Math.floor(x)` : Returns the largest integer less than or equal to a number.
 
 ```
 Math.floor(3.14)   // =>  3
@@ -645,18 +621,11 @@ Math.floor(-1.618) // => -2
 
 Additional utilities:
 
-<dl>
-<dt>Math.max([x[, y[, …]]])</dt>
-<dd>Returns the largest of zero or more numbers.</dd>
-<dt>Math.min([x[, y[, …]]])</dt>
-<dd>Returns the smallest of zero or more numbers.</dd>
-<dt>Math.pow(x, y)</dt>
-<dd>Returns base to the exponent power, that is, base<sup>exponent</sup>.</dd>
-<dt>Math.random()</dt>
-<dd>Returns a pseudo-random number between 0 and 1.</dd>
-<dt>Math.abs(x)</dt>
-<dd>Returns the absolute value of a number.</dd>
-</dl>
+- `Math.max([x[, y[, …]]])` : Returns the largest of zero or more numbers
+- `Math.min([x[, y[, …]]])` : Returns the smallest of zero or more numbers
+- `Math.pow(x, y)` : Returns base to the exponent power, that is, base<sup>exponent</sup>
+- `Math.random()` : Returns a pseudo-random number between 0 and 1
+- `Math.abs(x)` : Returns the absolute value of a number
 
 Reference: [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 
@@ -964,8 +933,6 @@ var day = false;
 
 JavaScript coerces primitives and objects to a Boolean when a Boolean is expected.
 
---
-
 Truthy : a value is “truthy” if it is not “falsy.”
 
 ---
@@ -1145,20 +1112,14 @@ class: middle, center
 
 An array is an ordered set of numerically-indexed values.
 
---
-
 Arrays can be created using the global `Array` function (not recommended) or by
 using the [Array literal](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Array_literals): `[]`
-
---
 
 ```
 var empty = [];
 var scores = [88, 75, 84, 100, 77, 105, 86];
 var books = ["To Kill a Mockingbird", "Prince Caspian", "The Hitchhiker’s Guide to the Galaxy"]
 ```
-
---
 
 Array values can accessed (or assigned) by a numeric index
 
@@ -1167,8 +1128,6 @@ console.log( books[0] );  // => "To Kill a Mockingbird"
 books[0] = "Fellowship of the Ring";
 console.log( books[0] );  // => "Fellowship of the Ring"
 ```
-
---
 
 [Introduction to Arrays on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
 
@@ -1195,6 +1154,263 @@ myArray = myArray.concat(["a", "b", "c"]);
 // myArray is now ["1", "2", "3", "a", "b", "c"]
 ```
 ---
+#### Programming with JavaScript
+## Array methods: join
+
+`join(deliminator = ',')` joins all elements of an array into a string.
+
+```
+var myArray = new Array("Wind", "Rain", "Fire");
+var list = myArray.join(" - "); // list is "Wind - Rain - Fire"
+```
+
+---
+#### Programming with JavaScript
+## Array methods: push
+
+`push()` adds one or more elements to the end of an array and returns the resulting length of the array.
+
+```
+var myArray = new Array("1", "2");
+myArray.push("3"); // myArray is now ["1", "2", "3"]
+```
+
+---
+#### Programming with JavaScript
+## Array methods: pop
+
+`pop()` removes the last element from an array and returns that element.
+
+```
+var myArray = new Array("1", "2", "3");
+var last = myArray.pop(); 
+// myArray is now ["1", "2"], last = "3"
+```
+
+---
+#### Programming with JavaScript
+## Array methods: shift
+
+`shift()` removes the first element from an array and returns that element.
+
+```
+var myArray = new Array ("1", "2", "3");
+var first = myArray.shift(); 
+// myArray is now ["2", "3"], first is "1"
+```
+
+---
+#### Programming with JavaScript
+## Array methods: unshift
+
+`unshift()` adds one or more elements to the front of an array and returns the new length of the array.
+
+```
+var myArray = new Array ("1", "2", "3");
+myArray.unshift("4", "5"); 
+// myArray becomes ["4", "5", "1", "2", "3"]
+```
+---
+#### Programming with JavaScript
+## Array methods: slice
+
+`slice(start_index, upto_index)` extracts a section of an array and returns a new array.
+
+```
+var myArray = new Array ("a", "b", "c", "d", "e");
+myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
+                               // until index 3, returning [ "b", "c", "d"]
+```
+
+---
+#### Programming with JavaScript
+## Array methods: splice
+
+`splice(index, count_to_remove, addElement1, addElement2, ...)` removes elements from an array and (optionally) replaces them.
+
+```
+var myArray = new Array ("1", "2", "3", "4", "5");
+myArray.splice(1, 3, "a", "b", "c", "d"); 
+// myArray is now ["1", "a", "b", "c", "d", "5"]
+// This code started at index one (or where the "2" was), 
+// removed 3 elements there, and then inserted all consecutive
+// elements in its place.
+```
+
+---
+#### Programming with JavaScript
+## Array methods: reverse
+
+`reverse()` transposes the elements of an array: the first array element becomes the last and the last becomes the first.
+
+```
+var myArray = new Array ("1", "2", "3");
+myArray.reverse(); 
+// transposes the array so that myArray = [ "3", "2", "1" ]
+```
+
+---
+#### Programming with JavaScript
+## Array methods: sort
+
+`sort([sortFunction])` sorts the elements of an array.
+
+```
+var myArray = new Array("Wind", "Rain", "Fire");
+myArray.sort(); 
+// sorts the array so that myArray = [ "Fire", "Rain", "Wind" ]
+```
+
+---
+#### Programming with JavaScript
+## Array methods: sort
+
+`sort()` can also take a callback function to determine how array elements are compared. The function compares two values and returns one of three values:
+
+- if a is **less than** b by the sorting system, return `-1` (or any negative number)
+- if a is **greater than** b by the sorting system, return `1` (or any positive number)
+- if a and b are considered **equivalent**, return `0`.
+
+For instance, the following will sort by the last letter of a string:
+
+```
+var sortFn = function(a, b){
+  if (a[a.length - 1] < b[b.length - 1]) return -1;
+  if (a[a.length - 1] > b[b.length - 1]) return 1;
+  if (a[a.length - 1] == b[b.length - 1]) return 0;
+}
+myArray.sort(sortFn); 
+// sorts the array so that myArray = ["Wind","Fire","Rain"]
+```
+
+---
+#### Programming with JavaScript
+## Array methods: indexOf
+
+`indexOf(searchElement[, fromIndex])` searches the array for `searchElement` and returns the index of the first match.
+
+```
+var a = ['a', 'b', 'a', 'b', 'a'];
+console.log(a.indexOf('b')); // logs 1
+// Now try again, starting from after the last match
+console.log(a.indexOf('b', 2)); // logs 3
+console.log(a.indexOf('z')); // logs -1, because 'z' was not found
+```
+
+---
+#### Programming with JavaScript
+## Array methods: lastIndexOf
+
+`lastIndexOf(searchElement[, fromIndex])` works like `indexOf()`, but starts at the end and searches backwards.
+
+```
+var a = ['a', 'b', 'c', 'd', 'a', 'b'];
+console.log(a.lastIndexOf('b')); // logs 5
+// Now try again, starting from before the last match
+console.log(a.lastIndexOf('b', 4)); // logs 1
+console.log(a.lastIndexOf('z')); // logs -1
+```
+
+---
+#### Programming with JavaScript
+## Array methods: forEach
+
+`forEach(callback[, thisObject])` executes `callback` on every array item.
+
+```
+var a = ['a', 'b', 'c'];
+a.forEach(function(element) { console.log(element);} ); 
+// logs each item in turn
+```
+
+---
+#### Programming with JavaScript
+## Array methods: map
+
+`map(callback[, thisObject])` returns a new array of the return value from executing `callback` on every array item.
+
+```
+var a1 = ['a', 'b', 'c'];
+var a2 = a1.map(function(item) { return item.toUpperCase(); });
+console.log(a2); // logs A,B,C
+```
+
+---
+#### Programming with JavaScript
+## Array methods: filter
+
+`filter(callback[, thisObject])` returns a new array containing the items for which `callback` returned `true`.
+
+```
+var a1 = ['a', 10, 'b', 20, 'c', 30];
+var a2 = a1.filter(function(item) { return typeof item == 'number'; });
+console.log(a2); // logs 10,20,30
+```
+
+---
+#### Programming with JavaScript
+## Array methods: every
+
+`every(callback[, thisObject])` returns `true` if `callback` returns `true` for every item in the array.
+
+```
+function isNumber(value){
+  return typeof value == 'number';
+}
+var a1 = [1, 2, 3];
+console.log(a1.every(isNumber)); // logs true
+var a2 = [1, '2', 3];
+console.log(a2.every(isNumber)); // logs false
+```
+
+---
+#### Programming with JavaScript
+## Array methods: some
+
+`some(callback[, thisObject])` returns `true` if `callback` returns `true` for at least one item in the array.
+
+```
+function isNumber(value){
+  return typeof value == 'number';
+}
+var a1 = [1, 2, 3];
+console.log(a1.some(isNumber)); // logs true
+var a2 = [1, '2', 3];
+console.log(a2.some(isNumber)); // logs true
+var a3 = ['1', '2', '3'];
+console.log(a3.some(isNumber)); // logs false
+```
+---
+#### Programming with JavaScript
+## Array methods: reduce
+
+`reduce(callback[, initialValue])` applies `callback(firstValue, secondValue)` to reduce the list of items down to a single value.
+
+```
+var a = [10, 20, 30];
+var total = a.reduce(function(first, second) { return first + second; }, 0);
+console.log(total) // Prints 60
+```
+
+`reduceRight(callback[, initalvalue])` works like `reduce()`, but starts with the last element.
+
+reduce and reduceRight are the least obvious of the iterative array methods. 
+They should be used for algorithms that combine two values recursively in order 
+to reduce a sequence down to a single value.
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
 
 Functions
 ---------
