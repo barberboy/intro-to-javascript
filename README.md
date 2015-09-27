@@ -1201,7 +1201,8 @@ var first = myArray.shift();
 #### Programming with JavaScript
 ## Array methods: unshift
 
-`unshift()` adds one or more elements to the front of an array and returns the new length of the array.
+`unshift()` adds one or more elements to the front of an array and returns the 
+new length of the array.
 
 ```
 var myArray = ["1", "2", "3"];
@@ -1212,19 +1213,22 @@ myArray.unshift("4", "5");
 #### Programming with JavaScript
 ## Array methods: slice
 
-`slice(start_index, upto_index)` extracts a section of an array and returns a new array.
+`slice(start_index, upto_index)` extracts a section of an array and returns a 
+new array.
 
 ```
 var myArray = ["a", "b", "c", "d", "e"];
-myArray = myArray.slice(1, 4); // starts at index 1 and extracts all elements
-                               // until index 3, returning [ "b", "c", "d"]
+myArray = myArray.slice(1, 4); 
+// starts at index 1 and extracts all elements until index 3,
+// returning [ "b", "c", "d"]
 ```
 
 ---
 #### Programming with JavaScript
 ## Array methods: splice
 
-`splice(index, count_to_remove, addElement1, addElement2, ...)` removes elements from an array and (optionally) replaces them.
+`splice(index, count_to_remove, addElement1, addElement2, ...)` removes elements
+from an array and (optionally) replaces them.
 
 ```
 var myArray = ["1", "2", "3", "4", "5"];
@@ -1239,7 +1243,8 @@ myArray.splice(1, 3, "a", "b", "c", "d");
 #### Programming with JavaScript
 ## Array methods: reverse
 
-`reverse()` transposes the elements of an array: the first array element becomes the last and the last becomes the first.
+`reverse()` transposes the elements of an array: the first array element becomes
+the last and the last becomes the first.
 
 ```
 var myArray = ["1", "2", "3"];
@@ -1263,10 +1268,13 @@ myArray.sort();
 #### Programming with JavaScript
 ## Array methods: sort
 
-`sort()` can also take a callback function to determine how array elements are compared. The function compares two values and returns one of three values:
+`sort()` can also take a callback function to determine how array elements are 
+compared. The function compares two values and returns one of three values:
 
-- if a is **less than** b by the sorting system, return `-1` (or any negative number)
-- if a is **greater than** b by the sorting system, return `1` (or any positive number)
+- if a is **less than** b by the sorting system, return `-1` (or any negative 
+  number)
+- if a is **greater than** b by the sorting system, return `1` (or any positive
+  number)
 - if a and b are considered **equivalent**, return `0`.
 
 For instance, the following will sort by the last letter of a string:
@@ -1285,7 +1293,8 @@ myArray.sort(sortFn);
 #### Programming with JavaScript
 ## Array methods: indexOf
 
-`indexOf(searchElement[, fromIndex])` searches the array for `searchElement` and returns the index of the first match.
+`indexOf(searchElement[, fromIndex])` searches the array for `searchElement` and
+returns the index of the first match.
 
 ```
 var a = ['a', 'b', 'a', 'b', 'a'];
@@ -1299,7 +1308,8 @@ console.log(a.indexOf('z')); // logs -1, because 'z' was not found
 #### Programming with JavaScript
 ## Array methods: lastIndexOf
 
-`lastIndexOf(searchElement[, fromIndex])` works like `indexOf()`, but starts at the end and searches backwards.
+`lastIndexOf(searchElement[, fromIndex])` works like `indexOf()`, but starts at 
+the end and searches backwards.
 
 ```
 var a = ['a', 'b', 'c', 'd', 'a', 'b'];
@@ -1325,7 +1335,8 @@ a.forEach(function(element) { console.log(element);} );
 #### Programming with JavaScript
 ## Array methods: map
 
-`map(callback[, thisObject])` returns a new array of the return value from executing `callback` on every array item.
+`map(callback[, thisObject])` returns a new array of the return value from 
+executing `callback` on every array item.
 
 ```
 var a1 = ['a', 'b', 'c'];
@@ -1337,11 +1348,14 @@ console.log(a2); // logs A,B,C
 #### Programming with JavaScript
 ## Array methods: filter
 
-`filter(callback[, thisObject])` returns a new array containing the items for which `callback` returned `true`.
+`filter(callback[, thisObject])` returns a new array containing the items for 
+which `callback` returned `true`.
 
 ```
 var a1 = ['a', 10, 'b', 20, 'c', 30];
-var a2 = a1.filter(function(item) { return typeof item == 'number'; });
+var a2 = a1.filter(function(item) {
+  return typeof item == 'number';
+});
 console.log(a2); // logs 10,20,30
 ```
 
@@ -1349,7 +1363,8 @@ console.log(a2); // logs 10,20,30
 #### Programming with JavaScript
 ## Array methods: every
 
-`every(callback[, thisObject])` returns `true` if `callback` returns `true` for every item in the array.
+`every(callback[, thisObject])` returns `true` if `callback` returns `true` for 
+every item in the array.
 
 ```
 function isNumber(value){
@@ -1365,7 +1380,8 @@ console.log(a2.every(isNumber)); // logs false
 #### Programming with JavaScript
 ## Array methods: some
 
-`some(callback[, thisObject])` returns `true` if `callback` returns `true` for at least one item in the array.
+`some(callback[, thisObject])` returns `true` if `callback` returns `true` for 
+at least one item in the array.
 
 ```
 function isNumber(value){
@@ -1382,15 +1398,19 @@ console.log(a3.some(isNumber)); // logs false
 #### Programming with JavaScript
 ## Array methods: reduce
 
-`reduce(callback[, initialValue])` applies `callback(firstValue, secondValue)` to reduce the list of items down to a single value.
+`reduce(callback[, initialValue])` applies `callback(firstValue, secondValue)` 
+to reduce the list of items down to a single value.
 
 ```
 var a = [10, 20, 30];
-var total = a.reduce(function(first, second) { return first + second; }, 0);
+var total = a.reduce(function(first, second) {
+  return first + second; 
+}, 0);
 console.log(total) // Prints 60
 ```
 
-`reduceRight(callback[, initalvalue])` works like `reduce()`, but starts with the last element.
+`reduceRight(callback[, initalvalue])` works like `reduce()`, but starts with 
+the last element.
 
 reduce and reduceRight are the least obvious of the iterative array methods. 
 They should be used for algorithms that combine two values recursively in order 
