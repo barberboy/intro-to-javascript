@@ -54,7 +54,7 @@ name: what-is-javascript
 - Non-blocking event loop
 - File and network IO
 - [CommonJS Modules 1.1](http://wiki.commonjs.org/wiki/Modules/1.1)
-- [npm package repository](npmjs.com)
+- [npm package repository](https://npmjs.com)
 
 ---
 #### What is JavaScript
