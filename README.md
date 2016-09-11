@@ -456,7 +456,7 @@ var price = 3;
 price.toFixed(2) // => "3.00"
 ```
 ---
-[name: operator]
+name: operators
 #### Programming with JavaScript
 ## Operators: Arithmetic
 
