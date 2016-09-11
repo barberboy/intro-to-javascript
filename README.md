@@ -454,7 +454,9 @@ var pi = 3.141592654;
 pi.toFixed(4);   // => "3.1416"
 var price = 3;
 price.toFixed(2) // => "3.00"
-```[ame: operato]s
+```
+---
+[name: operator]
 #### Programming with JavaScript
 ## Operators: Arithmetic
 
